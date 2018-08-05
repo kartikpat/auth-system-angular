@@ -15,6 +15,9 @@ export class AuthService {
 
   setLoggedIn(value: boolean) {
   	this.loggedInStatus = value
+    if(!value){
+        return localStorage.removeItem('loggedIn')
+    }
     localStorage.setItem('loggedIn', 'true')
   }
 

@@ -6,12 +6,14 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +21,10 @@ import { AuthService } from './auth.service';
       {
         path: 'login',
         component: LoginComponent
+      },
+      {
+        path: 'logout',
+        component: LogoutComponent
       },
       {
         path: '',
